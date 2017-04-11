@@ -1,0 +1,50 @@
+<suite name="Auvenir Automation Testing" verbose="1">
+    <listeners>
+        <listener class-name="com.auvenir.listener.TestListener"></listener>
+        <listener class-name="com.kirwa.nxgreport.listners.NXGTestListner"></listener>
+    </listeners>
+
+    <parameter name="url" value="https://www.facebook.com/"/>
+    <parameter name="browser" value="Chrome"/>
+
+    <test name="Login" preserve-order="true">
+        <classes>
+            <class name="com.auvenir.test.LoginTest"></class>
+        </classes>
+    </test>
+    <test name="Home Page" preserve-order="true">
+        <classes>
+            <class name="com.auvenir.test.HomePageTest"></class>
+        </classes>
+    </test>
+    <test name="Privacy Policy Page" preserve-order="true">
+        <classes>
+            <class name="com.auvenir.test.PrivacyPolicyTest"></class>
+        </classes>
+    </test>
+    <test name="About Page" preserve-order="true">
+        <classes>
+            <class name="com.auvenir.test.AboutTest"></class>
+        </classes>
+    </test>
+    <test name="Careers Page" preserve-order="true">
+        <classes>
+            <class name="com.auvenir.test.CareersTest"></class>
+        </classes>
+    </test>
+    <test name="Contact Page" preserve-order="true">
+        <classes>
+            <class name="com.auvenir.test.ContactTest"></class>
+        </classes>
+    </test>
+    <test name="Cookies Notice Page" preserve-order="true">
+        <classes>
+            <class name="com.auvenir.test.CookiesNoticeTest"></class>
+        </classes>
+    </test>
+    <test name="Terms and Condition Page" preserve-order="true">
+        <classes>
+            <class name="com.auvenir.test.TermsTest"></class>
+        </classes>
+    </test>
+</suite>
