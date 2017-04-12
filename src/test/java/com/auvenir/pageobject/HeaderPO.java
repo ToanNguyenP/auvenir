@@ -12,12 +12,16 @@ public class HeaderPO extends LoadableComponent<HeaderPO> {
 
     private WebDriver webDriver;
     private LoginPO loginPO;
+    private ForgotPassPO forgotPassPO;
+    private ResetLinkSentPO resetLinkSentPO;
 
     public HeaderPO(WebDriver webDriver){
         this.webDriver = webDriver;
         PageFactory.initElements(webDriver, this);
 
         loginPO = new LoginPO(webDriver);
+        forgotPassPO = new ForgotPassPO(webDriver);
+        resetLinkSentPO = new ResetLinkSentPO(webDriver);
     }
 
     @Override
@@ -31,4 +35,6 @@ public class HeaderPO extends LoadableComponent<HeaderPO> {
     }
 
     public LoginPO getLoginPO(){ return loginPO; }
+    public ForgotPassPO getForgotPassPO() { return forgotPassPO; }
+    public ResetLinkSentPO getResetLinkSentPO() { return resetLinkSentPO; }
 }
