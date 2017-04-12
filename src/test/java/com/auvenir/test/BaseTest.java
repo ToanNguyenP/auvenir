@@ -1,5 +1,6 @@
 package com.auvenir.test;
 
+import com.auvenir.pageobject.BaseAuditorOnBoardingPO;
 import com.auvenir.pageobject.BasePagePO;
 import com.kirwa.nxgreport.NXGReports;
 import org.openqa.selenium.WebDriver;
@@ -16,6 +17,7 @@ public abstract class BaseTest {
 
     protected WebDriver webDriver;
     protected BasePagePO basePage;
+    protected BaseAuditorOnBoardingPO baseAuditorOnBoardingPO;
 
     enum BrowserType{
         CHROME, FIREFOX, IE
