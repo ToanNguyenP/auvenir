@@ -5,14 +5,14 @@
     </listeners>
 
     <parameter name="url" value="https://www.facebook.com/"/>
-    <parameter name="browser" value="Chrome"/>
+    <parameter name="browser" value="IE"/>
 
     <test name="Login" preserve-order="true">
         <classes>
             <class name="com.auvenir.test.LoginTest"></class>
         </classes>
     </test>
-    <test name="Home Page" preserve-order="true">
+   <!-- <test name="Home Page" preserve-order="true">
         <classes>
             <class name="com.auvenir.test.HomePageTest"></class>
         </classes>
@@ -46,5 +46,5 @@
         <classes>
             <class name="com.auvenir.test.TermsTest"></class>
         </classes>
-    </test>
+    </test>-->
 </suite>
