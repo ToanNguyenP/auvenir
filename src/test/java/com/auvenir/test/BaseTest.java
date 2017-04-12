@@ -17,7 +17,7 @@ public abstract class BaseTest {
     protected WebDriver webDriver;
     protected BasePagePO basePage;
 
-    enum BrowerType{
+    enum BrowserType{
         CHROME, FIREFOX, IE
     }
 
@@ -25,7 +25,7 @@ public abstract class BaseTest {
     @Parameters({"url", "browser"})
     public void setUp(String url, String browser){
 
-        BrowerType type = BrowerType.valueOf(browser.toUpperCase());
+        BrowserType type = BrowserType.valueOf(browser.toUpperCase());
 
         switch (type){
             case CHROME:
