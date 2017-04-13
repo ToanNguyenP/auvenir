@@ -3,8 +3,12 @@ package com.auvenir.test;
 import com.auvenir.pageobject.BaseAuditorOnBoardingPO;
 import com.auvenir.pageobject.BasePagePO;
 import com.kirwa.nxgreport.NXGReports;
+import org.openqa.selenium.Capabilities;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.ie.InternetExplorerDriver;
+import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
@@ -35,8 +39,16 @@ public abstract class BaseTest {
                 webDriver = new ChromeDriver();
                 break;
             case FIREFOX:
+                System.setProperty("webdriver.gecko.driver", "drivers\\geckodriver.exe");
+                DesiredCapabilities cap = DesiredCapabilities.firefox();
+                //cap.setCapability("marionette", true);
+                webDriver = new FirefoxDriver(cap);
                 break;
             case IE:
+                System.setProperty("webdriver.ie.driver", "drivers\\IEDriverServer_32.exe");
+                DesiredCapabilities capFF = new DesiredCapabilities();
+                capFF.setCapability(InternetExplorerDriver.IE_ENSURE_CLEAN_SESSION, true);
+                webDriver = new InternetExplorerDriver(capFF);
                 break;
             default:
                 break;
@@ -52,5 +64,6 @@ public abstract class BaseTest {
     @AfterClass
     public void tearDown(){
         webDriver.close();
+        webDriver.quit();
     }
 }
