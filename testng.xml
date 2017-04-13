@@ -4,20 +4,20 @@
         <listener class-name="com.kirwa.nxgreport.listners.NXGTestListner"></listener>
     </listeners>
 
-    <parameter name="url" value="https://www.facebook.com/"/>
-    <parameter name="browser" value="Firefox"/>
+    <parameter name="url" value="https://ariel.auvenir.com/"/>
+    <parameter name="browser" value="CHROME"/>
 
-    <test name="Login" preserve-order="true">
+    <!--<test name="Login" preserve-order="true">
         <classes>
             <class name="com.auvenir.test.LoginTest"></class>
         </classes>
-    </test>
-   <!-- <test name="Home Page" preserve-order="true">
+    </test>-->
+   <test name="Home Page" preserve-order="true">
         <classes>
             <class name="com.auvenir.test.HomePageTest"></class>
         </classes>
-    </test>
-    <test name="Privacy Policy Page" preserve-order="true">
+   </test>
+    <!-- <test name="Privacy Policy Page" preserve-order="true">
         <classes>
             <class name="com.auvenir.test.PrivacyPolicyTest"></class>
         </classes>

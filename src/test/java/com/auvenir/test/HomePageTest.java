@@ -13,11 +13,11 @@ public class HomePageTest extends BaseTest{
     @Test(priority = 1)
     public void loginTest(){
         basePage = new HomePO(webDriver).get();
-        basePage.getHeaderPO().getLoginPO().login();
+        basePage.getHeaderPO().getLoginPO();
     }
 
-    @Test(priority = 2)
-    public void verifyPageContentTest(){
-        basePage.verifyContentPage();
-    }
+    //@Test(priority = 2)
+    //public void verifyPageContentTest(){
+      //  basePage.verifyContentPage();
+    //}
 }
