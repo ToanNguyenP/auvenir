@@ -22,6 +22,7 @@ public abstract class BaseTest {
     protected WebDriver webDriver;
     protected BasePagePO basePage;
     protected BaseAuditorOnBoardingPO baseAuditorOnBoardingPO;
+    protected int a;
 
     enum BrowserType{
         CHROME, FIREFOX, IE
